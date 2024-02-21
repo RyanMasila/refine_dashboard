@@ -2,7 +2,7 @@ import { GraphQLFormattedError } from "graphql";
 
 type Error = {
     message: string;
-    statusCode: string;
+    statusCode: string | any;
 }
 
 const customFetch = async (url: string, options: RequestInit) => {
