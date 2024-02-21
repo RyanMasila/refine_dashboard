@@ -2,7 +2,7 @@ import { DndContext, DragEndEvent, MouseSensor, TouchSensor, useSensor, useSenso
 import React from 'react'
 
 
-export const KanbanBoardContainer = ({ children }: React.PropsWithChildren<Props>) => {
+export const KanbanBoardContainer = ({ children }: React.PropsWithChildren) => {
   return (
     <div
         style = {{

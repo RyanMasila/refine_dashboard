@@ -7,13 +7,13 @@ import { ClockCircleOutlined, DeleteOutlined, EyeOutlined, MoreOutlined } from '
 import { useDelete, useNavigation } from '@refinedev/core'
 import { Button, Card, ConfigProvider, Dropdown, MenuProps, Space, Tag, Tooltip, theme } from 'antd'
 import dayjs from 'dayjs'
-import React, { memo, useMemo } from 'react'
+import React, { PropsWithChildren, memo, useMemo } from 'react'
 
 type ProjectCardProps = {
     id: string,
     title: string,
     updatedAt: string,
-    dueDate: string,
+    dueDate?: string,
     users?: {
         id: string,
         name: string,
@@ -21,7 +21,7 @@ type ProjectCardProps = {
     }[]
 }
 
-const ProjectCard = ({ id, title, dueDate, users }: ProjectCardProps) => {
+const ProjectCard = ({ id, title, dueDate, users }: PropsWithChildren<ProjectCardProps>) => {
 
   const { token } = theme.useToken();
 
