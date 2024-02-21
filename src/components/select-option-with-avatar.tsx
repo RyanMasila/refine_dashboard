@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react"
 import CustomAvatar from "./custom-avatar"
 import { Text } from "./text"
 
@@ -7,7 +8,7 @@ type Props = {
     shape?: 'circle' | 'square'
 }
 
-const SelectOptionWithAvatar = ({ avatarUrl, name, shape }) => {
+const SelectOptionWithAvatar = ({ avatarUrl, name, shape }: PropsWithChildren<Props>) => {
   return (
     <div
         style={{
